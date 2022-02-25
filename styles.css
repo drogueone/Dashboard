@@ -1,0 +1,270 @@
+/*Colors*/
+
+:root {
+    --accent-default: #3751FF;
+    --accent-light: #DDE2FF;
+    --accent-gradient: linear-gradient(90.03deg, #3751FF 1.47%, rgba(55, 81, 255, 0) 96.74%);
+
+    --grayscale-gray: #A4A6B3;
+
+    --grayscale-gray-light: #C5C7CD;
+    --grayscale-gray-lightest: #e7e8f0;
+    --grayscale-gray-extralight: #f0f3f7;
+
+    --grayscale-gray-dark: #4B506D;
+
+    --grayscale-white: #FFFFFF;
+    --grayscale-black: #252733;
+
+    --grayscale-divider: #DFE0EB;
+    --grayscale-divider-graph: #EBEDF0;
+    --grayscale-background: #F7F8FC;
+
+    --sidebar-background: #363740;
+    --sidebar-gray: #A4A6B3;
+
+    --yellow-default: #FEC400;
+    --green-default: #29CC97;
+    --red-default: #F12B2C;
+}
+
+/*Reset CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*Container*/
+
+#login {
+    height: 100vh;
+
+    background-color: var(--sidebar-background);
+
+    display: flex;
+    align-items: center;
+}
+
+#login .container {
+    background-color: var(--grayscale-white);
+    border: 1px solid var(--grayscale-divider);
+    border-radius: 8px;
+
+    margin: auto;
+    padding: 40px;
+    height: 582px;
+    width: 380px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Container -> Logo*/
+
+#login .container .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login .container .logo img {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 12px;
+}
+
+#login .container .logo h1 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: var(--grayscale-gray);
+    opacity: 0.7;
+}
+
+/*Container -> Intro*/
+
+#login .container .intro h2 {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: var(--grayscale-black);
+}
+
+#login .container .intro p {
+    font-size: 0.9rem;
+    text-align: center;
+    color: var(--grayscale-gray);
+
+    margin-top: 12px;
+}
+
+/*Container -> Form*/
+
+#login .container .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#login .container .form .input-group {
+    margin-bottom: 24px;
+}
+
+#login .container .form .label {
+    display: block;
+    position: relative;
+
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: var(--grayscale-gray);
+
+    margin-bottom: 6px;
+}
+
+#login .container .form .label a {
+    text-decoration: none;
+    text-transform: none;
+
+    font-weight: normal;
+    font-size: 0.8rem;
+    letter-spacing: 0.1px;
+    color: var(--grayscale-gray);
+
+    position: absolute;
+    right: 0;
+}
+
+#login .container .form .input {
+    border: 1px solid var(--grayscale-gray-lightest);
+    border-radius: 8px;
+    background-color: var(--grayscale-gray-extralight);
+
+    height: 42px;
+    width: 100%;
+
+    padding: 0 8px 0 16px;
+
+    font-size: 0.9rem;
+    line-height: 1rem;
+    letter-spacing: 0.3px;
+    color: var(--grayscale-gray-dark);
+    opacity: 0.4;
+}
+
+#login .container .form .input:focus {
+    outline: 1px solid var(--accent-default);
+}
+
+#login .container .form .input-container {
+    position: relative;
+}
+
+.show-icon::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    background: url('./assets/icon-passwd.svg');
+    width: 20px;
+    height: 20px;
+    top: 12px;
+    right: 10px;
+}
+
+#login .container .form .button {
+    background-color: var(--accent-default);
+
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: var(--grayscale-white);
+
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
+    cursor: pointer;
+
+    height: 48px;
+    width: 100%;
+
+    transition: 30ms ease-out;
+}
+
+#login .container .form .button:hover {
+    filter: opacity(0.9);
+}
+
+/*Container -> Footer*/
+
+#login .container .footer {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: var(--grayscale-gray);
+}
+
+#login .container .footer a{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--accent-default);
+}
