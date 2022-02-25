@@ -1,0 +1,122 @@
+/*Container*/
+
+#login {
+    height: 100vh;
+
+    background-color: var(--sidebar-background);
+
+    display: flex;
+    align-items: center;
+}
+
+#login .container {
+    background-color: var(--grayscale-white);
+    border: 1px solid var(--grayscale-divider);
+    border-radius: 8px;
+
+    margin: auto;
+    padding: 40px;
+    height: 582px;
+    width: 380px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Container -> Logo*/
+
+#login .container .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login .container .logo img {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 12px;
+}
+
+#login .container .logo h1 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: var(--grayscale-gray);
+    opacity: 0.7;
+}
+
+/*Container -> Intro*/
+
+#login .container .intro h2 {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: var(--grayscale-black);
+}
+
+#login .container .intro p {
+    font-size: 0.9rem;
+    text-align: center;
+    color: var(--grayscale-gray);
+
+    margin-top: 12px;
+}
+
+/*Container -> Form*/
+
+#login .container .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#login .container .form .label a {
+    text-decoration: none;
+    text-transform: none;
+
+    font-weight: normal;
+    font-size: 0.8rem;
+    letter-spacing: 0.1px;
+    color: var(--grayscale-gray);
+
+    position: absolute;
+    right: 0;
+}
+
+#login .container .form .input-container {
+    position: relative;
+}
+
+.show-icon::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    background: url('./assets/icon-passwd.svg');
+    width: 20px;
+    height: 20px;
+    top: 12px;
+    right: 10px;
+}
+
+/*Container -> Footer*/
+
+#login .container .footer {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: var(--grayscale-gray);
+}
+
+#login .container .footer a{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--accent-default);
+}
