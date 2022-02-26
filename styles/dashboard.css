@@ -1,6 +1,5 @@
 #dashboard {
-    height: 100vh;
-
+    height: 175vh;
     display: grid;
     grid-template-areas: 
         "sidebar header"
@@ -17,12 +16,18 @@
     color: var(--sidebar-gray);
 
     grid-area: sidebar;
+
+    position: fixed;
+
+    height: 100vh;
 }
 
 #dashboard aside .logo {
     display: flex;
     align-items: center;
     padding: 37px 32px;
+
+    cursor: pointer;
 }
 
 #dashboard aside .logo img {
@@ -224,6 +229,10 @@
     padding: 32px;
 }
 
+#dashboard main .graph .main-graph {
+    padding-top: 20px;
+}
+
 #dashboard main .graph .main .main-header {
     display: flex;
     align-items: flex-end;
@@ -245,7 +254,7 @@
     height: 1px;
     background-color: var(--accent-default);
     border: 1px solid var(--accent-default);
-    border-radius: 50%;
+    border-radius: 50px;
     position: absolute;
     left: -30px;
     top: calc(50% - 0px/2);
@@ -304,4 +313,91 @@
 /*Card-list*/
 #dashboard main .card-list {
     grid-area: cardlist;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+#dashboard main .card-list .cardlist-item {
+    padding: 0;
+    height: 100%;
+}
+
+#dashboard main .card-list .cardlist-item .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 32px 32px 0;
+}
+
+#dashboard main .card-list .cardlist-item .card-header a {
+    width: auto;
+}
+
+#dashboard main .card-list .cardlist-item .card-main li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 32px;
+
+    border-bottom: 1px solid var(--grayscale-divider);
+}
+
+#dashboard main .card-list .cardlist-item .card-main li p.newtask {
+    color: var(--grayscale-gray-light);
+}
+
+#dashboard main .card-list .cardlist-item .card-main li:last-child {
+    border: none;
+}
+
+#dashboard main .card-list .cardlist-item .card-main li div {
+    display: flex;
+    align-items: center;
+}
+
+#dashboard main .card-list .cardlist-item .card-main li div .menu-icon {
+    margin-right: 16px;
+    color: var(--grayscale-gray-light);
+    cursor: pointer;
+}
+
+#dashboard main .card-list .cardlist-item .card-main li div span.checked {
+    color: var(--accent-default);
+}
+
+#dashboard main .card-list .cardlist-item .card-main .add-button {
+    color: var(--grayscale-gray);
+    background-color: var(--grayscale-gray-lightest);
+    padding: 2px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#dashboard main .card-list .cardlist-item .card-main .tag {
+    font-weight: bold;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--grayscale-white);
+    padding: 5px 12px;
+    height: 24px;
+    border-radius: 8px;
+}
+
+.tag-urgent {
+    background-color: var(--yellow-default);    
+}
+.tag-new {
+    background-color: var(--green-default);    
+}
+.tag-default {
+    color: var(--grayscale-gray);
+    background-color: var(--grayscale-gray-lightest);    
 }

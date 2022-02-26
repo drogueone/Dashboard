@@ -22,10 +22,12 @@
 <body id="dashboard">
     
     <aside>
-        <div class="logo">
-            <img src="../assets/logo.svg" alt="Logo">
-            <h1>Dashboard Kit</h1>
-        </div>
+        <a href="./index.html">
+            <div class="logo"">
+                <img src="../assets/logo.svg" alt="Logo">
+                <h1>Dashboard Kit</h1>
+            </div>
+        </a>
         <ul>
             <li>
                 <a href="#">
@@ -125,7 +127,9 @@
                         <span class="yesterday">Yesterday</span>
                     </div>
                 </div>
-                <div class="main-graph"></div>
+                <div class="main-graph">
+                    <canvas id="myChart" style="width:100%;"></canvas>
+                </div>
             </div>
             <ul class="sidelist">
                 <li><h5>Resolved</h5><span>449</span></li>
@@ -174,23 +178,29 @@
                 </div>
                 <ul class="card-main">
                     <li>
-                        <p>Create new task</p>
-                        <span>Icon create</span>
+                        <p class="newtask">Create new task</p>
+                        <span class="material-icons add-button">add</span>
                     </li>
                     <li>
-                        <span class="material-icons menu-icon">radio_button_unchecked</span>
-                        <p>Awaiting Customer Response</p>
-                        <span>Tag Urgent</span>
+                        <div>
+                            <span class="material-icons menu-icon">radio_button_unchecked</span>
+                            <p>Awaiting Customer Response</p>
+                        </div>
+                        <span class="tag tag-urgent">Urgent</span>
                     </li>
                     <li>
-                        <span class="material-icons menu-icon">radio_button_unchecked</span>
-                        <p>Awaiting Developer Fix</p>
-                        <span>Tag New</span>
+                        <div>
+                            <span class="material-icons menu-icon">radio_button_unchecked</span>
+                            <p>Awaiting Developer Fix</p>
+                        </div>
+                        <span class="tag tag-new">New</span>
                     </li>
                     <li>
-                        <span class="material-icons menu-icon">check_circle</span>
-                        <p>Pending</p>
-                        <span>Tag Default</span>
+                        <div>
+                            <span class="material-icons menu-icon checked">check_circle</span>
+                            <p>Pending</p>
+                        </div>
+                        <span class="tag tag-default">Default</span>
                     </li>
                 </ul>
             </div> 
@@ -199,5 +209,8 @@
 
     <script src="./scripts/inputPasswdRemoveIcon.js"></script>
     <script src="../scripts/selectDropdown.js"></script>
+    <!--Gráfico-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="../scripts/loadGraph.js"></script>
 </body>
 </html>
