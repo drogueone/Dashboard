@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Import Google font Mulish-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!--Import Material icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import local stylesheet-->
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="../styles/global.css">
+
+    <title>Dashboard</title>
+</head>
+<body id="dashboard">
+    
+    <aside>
+        <div class="logo">
+            <img src="../assets/logo.svg" alt="Logo">
+            <h1>Dashboard Kit</h1>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="material-icons menu-icon">pie_chart</span>
+                    Overview
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="material-icons menu-icon">confirmation_number</span>
+                    Tickets
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="material-icons menu-icon">lightbulb</span>
+                    Ideas
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="material-icons menu-icon">groups</span>
+                    Contacts
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="material-icons menu-icon">person</span>
+                    Agents
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="material-icons menu-icon">book</span>
+                    Articles
+                </a>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="material-icons menu-icon">settings</span>
+                    Settings
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="material-icons menu-icon">workspace_premium</span>
+                    Subscription
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <header>
+        <h2>Overview</h2>
+        <div class="user-control">
+            <span class="material-icons">search</span>
+            <span class="material-icons badge">notifications</span>
+            <div class="user-info">
+                <span>Jones Ferndinand</span>
+                <img src="../assets/user-photo.png" alt="User Photo">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="gauges">
+            <div class="gauge card">
+                <h3 class="card-tittle">Unresolved</h3>
+                <span>60</span>
+            </div>
+            <div class="gauge card">
+                <h3 class="card-tittle">Overdue</h3>
+                <span>16</span>
+            </div>
+            <div class="gauge card">
+                <h3 class="card-tittle">Open</h3>
+                <span>43</span>
+            </div>
+            <div class="gauge card">
+                <h3 class="card-tittle">On hold</h3>
+                <span>64</span>
+            </div>
+        </section>
+
+        <section class="graph card">
+            <div class="main">
+                <div class="main-header">
+                    <div>
+                        <h4>Today's trends</h4>
+                        <span>as of 25 May 2019, 09:41 PM</span>
+                    </div>
+                    <div>
+                        <span class="today">Today</span>
+                        <span class="yesterday">Yesterday</span>
+                    </div>
+                </div>
+                <div class="main-graph"></div>
+            </div>
+            <ul class="sidelist">
+                <li><h5>Resolved</h5><span>449</span></li>
+                <li><h5>Received</h5><span>426</span></li>
+                <li><h5>Average first response time</h5><span>33m</span></li>
+                <li><h5>Average response time</h5><span>3h 8m</span></li>
+                <li><h5>Resolution within SLA</h5><span>94%</span></li>
+            </ul>
+        </section>
+
+        <section class="card-list">
+            <div class="cardlist-item card">
+                <div class="card-header">
+                    <div class="tittle">
+                        <h3>Unresolved tickets</h3>
+                        <span>Group: <strong>Support</strong></span>
+                    </div>
+                    <a href="#" class="button link-button">View details</a>
+                </div>
+                <ul class="card-main">
+                    <li>
+                        <p>Waiting on Feature Request</p>
+                        <span>4238</span>
+                    </li>
+                    <li>
+                        <p>Awaiting Customer Response</p>
+                        <span>1005</span>
+                    </li>
+                    <li>
+                        <p>Awaiting Developer Fix</p>
+                        <span>914</span>
+                    </li>
+                    <li>
+                        <p>Pending</p>
+                        <span>281</span>
+                    </li>
+                </ul>
+            </div> 
+            <div class="cardlist-item card">
+                <div class="card-header">
+                    <div class="tittle">
+                        <h3>Tasks</h3>
+                        <span>Today</span>
+                    </div>
+                    <a href="#" class="button link-button">View all</a>
+                </div>
+                <ul class="card-main">
+                    <li>
+                        <p>Create new task</p>
+                        <span>Icon create</span>
+                    </li>
+                    <li>
+                        <span class="material-icons menu-icon">radio_button_unchecked</span>
+                        <p>Awaiting Customer Response</p>
+                        <span>Tag Urgent</span>
+                    </li>
+                    <li>
+                        <span class="material-icons menu-icon">radio_button_unchecked</span>
+                        <p>Awaiting Developer Fix</p>
+                        <span>Tag New</span>
+                    </li>
+                    <li>
+                        <span class="material-icons menu-icon">check_circle</span>
+                        <p>Pending</p>
+                        <span>Tag Default</span>
+                    </li>
+                </ul>
+            </div> 
+        </section>
+    </main>
+
+    <script src="./scripts/inputPasswdRemoveIcon.js"></script>
+    <script src="../scripts/selectDropdown.js"></script>
+</body>
+</html>

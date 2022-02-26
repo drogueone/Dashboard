@@ -1,0 +1,307 @@
+#dashboard {
+    height: 100vh;
+
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 255px 1fr;
+    grid-template-rows: 80px 1fr;
+
+    background-color: var(--grayscale-background);
+}
+
+/*Aside*/
+#dashboard aside {
+    background-color: var(--sidebar-background);
+    color: var(--sidebar-gray);
+
+    grid-area: sidebar;
+}
+
+#dashboard aside .logo {
+    display: flex;
+    align-items: center;
+    padding: 37px 32px;
+}
+
+#dashboard aside .logo img {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+}
+
+#dashboard aside .logo h1 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.4px;
+    opacity: 0.7;
+}
+
+#dashboard aside ul li a {
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 32px;
+
+    color: var(--sidebar-gray);
+    border-left: 3px solid var(--sidebar-background);
+}
+
+#dashboard aside ul li a span {
+    margin-right: 24px;
+    opacity: 0.4;
+}
+
+#dashboard aside ul li a:hover {
+    background-color: var(--accent-dark);
+    border-left: 3px solid var(--accent-light);
+    color: var(--accent-light);
+}
+
+#dashboard aside ul li a:hover span.material-icons {
+    color: var(--accent-light);
+    opacity: 1;
+}
+
+#dashboard aside ul div.divider {
+    height: 1px;
+    background-color: var(--grayscale-divider);
+    opacity: 0.1;
+    margin: 16px 0;
+}
+
+/*Header*/
+#dashboard header {
+    grid-area: header;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 30px;
+}
+
+#dashboard header h2 {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.3px;
+    color: var(--grayscale-black);
+}
+
+#dashboard header .user-control {
+    display: flex;
+    align-items: center;
+}
+
+#dashboard header .user-control .material-icons {
+    color: var(--grayscale-gray-light);
+    margin-right: 24px;
+    position: relative;
+}
+
+.badge::after {
+    position: absolute;
+    content: " ";
+    width: 7px;
+    height: 7px;
+    background-color: var(--accent-default);
+    border-radius: 50%;
+    border: 2px solid var(--grayscale-background);
+    right: 0;
+    top: 1px;
+}
+
+#dashboard header .user-control .user-info {
+    display: flex;
+    align-items: center;
+
+    height: 32px;
+
+    padding-left: 32px;
+    border-left: 1px solid var(--grayscale-divider);
+}
+
+#dashboard header .user-control .user-info span {
+    color: var(--grayscale-black);
+    margin-right: 12px;
+}
+
+#dashboard header .user-control .user-info img {
+    border: 2px solid var(--grayscale-background);
+    outline: 2px solid var(--grayscale-divider);
+    border-radius: 50%;
+}
+
+/*Main*/
+#dashboard main {
+    grid-area: main;
+    margin: 30px;
+
+    display: grid;
+    grid-template-areas: 
+    "gauge"
+    "graph"
+    "cardlist";
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 134px 546px 336px;
+
+    gap: 30px;
+
+    max-width: 1650px;
+}
+
+.card {
+    background-color: var(--grayscale-white);
+    border: 1px solid var(--grayscale-divider);
+    border-radius: 8px;
+    padding: 24px 32px;
+}
+
+/*Gauges*/
+#dashboard main .gauges {
+    grid-area: gauge;
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: left;
+    gap: 30px;
+
+}
+
+#dashboard main .gauges .gauge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 258px;
+    max-width: 400px;
+}
+
+#dashboard main .gauges .gauge h3 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: var(--grayscale-gray);
+}
+
+#dashboard main .gauges .gauge span {
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    letter-spacing: 1px;
+    color: var(--grayscale-black);
+    margin-top: 12px;
+}
+
+#dashboard main .gauges .card:hover {
+    border: 1px solid var(--accent-default);
+    color: var(--accent-default);
+}
+
+#dashboard main .gauges .card:hover h3,
+#dashboard main .gauges .card:hover span {
+    color: var(--accent-default);
+}
+
+/*Graph*/
+#dashboard main .graph {
+    grid-area: graph;
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 0;
+}
+
+#dashboard main .graph .main {
+    flex: 1;
+    padding: 32px;
+}
+
+#dashboard main .graph .main .main-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.today {
+    margin-right: 60px;
+}
+
+.today,
+.yesterday {
+    position: relative;
+}
+
+.today::before {
+    content: " ";
+    width: 20px;
+    height: 1px;
+    background-color: var(--accent-default);
+    border: 1px solid var(--accent-default);
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: calc(50% - 0px/2);
+}
+
+.yesterday::before {
+    content: " ";
+    width: 20px;
+    height: 1px;
+    background-color: var(--grayscale-divider);
+    border: 1px solid var(--grayscale-divider);
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: calc(50% - 0px/2);
+}
+
+#dashboard main .graph .sidelist {
+    width: 342px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    border-left: 1px solid var(--grayscale-divider);
+}
+
+#dashboard main .graph .sidelist li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid var(--grayscale-divider);
+
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 0.3px;
+    color: var(--grayscale-gray);
+}
+
+#dashboard main .graph .sidelist li:last-child {
+    border: none;
+}
+
+#dashboard main .graph .sidelist li span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 0.3px;
+    color: var(--grayscale-black);
+}
+
+/*Card-list*/
+#dashboard main .card-list {
+    grid-area: cardlist;
+}
